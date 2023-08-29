@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 
 app = Flask(__name__)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 @app.route('/')
 def homepage():
@@ -12,4 +13,4 @@ def test():
 
 @app.route('/confirmation')
 def confirmation():
-    return '{"message":"confirmation form"}'
+    return render_template('confirmation.html')
