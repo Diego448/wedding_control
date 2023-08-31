@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Z&D Admin</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Z&D wedding</h1>
+        <h3>Administrador</h3>
+        <div class="row">
+            <a class="waves-effect waves-light btn modal-trigger" href="#addFamily">Agregar familia</a>
+        </div>
+
+        <div class="row">
+            <ul class="collection">
+                {% for entry in data %}
+                <li class="collection-item avatar">
+                    <img src={{ url_for('static', filename='family_icon_big.png') }} alt="" class="circle">
+                    <span class="title">{{ entry['name'] }}</span>
+                    <p>{{ entry['desc'] }}</p>
+                    <p>Adultos: {{ entry['adults'] }}</p>
+                    <p>Menores: {{ entry['children'] }}</p>
+                    <p>Tel: {{ entry['phone'] }}</p>
+                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                </li>
+                {% endfor %}
+              </ul>
+
+        </div>
+
+        <div id="addFamily" class="modal">
+            <div class="modal-content">
+                <h4>Agregar familia</h4>
+                <form method="post" onsubmit="clearForm">
+                    <input type="text" name="id" id="id" required />
+                    <input type="text" name="name" id="name" required />
+                    <input type="text" name="desc" id="desc" required />
+                    <input type="number" name="adults" id="adults" min="1" max="10" required />
+                    <input type="number" name="children" id="children" min="0" max="10" required />
+                    <input type="tel" name="phone" id="phone" required />
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src={{ url_for('static', filename='js/initialize.js') }}></script>
+</body>
+</html>
