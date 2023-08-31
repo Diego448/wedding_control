@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from db_utils import get_all, add, get
+from db_utils import get_all, add, get, confirm
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -35,7 +35,8 @@ def confirmation(id=None):
     if request.method == 'GET':
         return render_template('confirmation.html', invite_data=invite_data)
     elif request.method == 'POST':
-        return '{"message":"Not implemented!"}'
+        confirm(id, request.form.to_dict())
+        return '{"message":"Asistencia confirmada, muchas gracias"}'
     
 @app.route('/admin', methods=['POST', 'GET'])
 def admin():

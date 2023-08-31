@@ -25,7 +25,13 @@
                     <p>Adultos: {{ entry['adults'] }}</p>
                     <p>Menores: {{ entry['children'] }}</p>
                     <p>Tel: {{ entry['phone'] }}</p>
-                    <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                    {% if entry['confirmed'] == 'true' %}
+                    <a href="#!" class="secondary-content"><i class="material-icons">check</i></a>
+                    {% elif entry['confirmed'] == 'false' %}
+                    <a href="#!" class="secondary-content"><i class="material-icons">close</i></a>
+                    {% else  %}
+                    <a href="#!" class="secondary-content"><i class="material-icons">question_mark</i></a>
+                    {% endif %}
                 </li>
                 {% endfor %}
               </ul>

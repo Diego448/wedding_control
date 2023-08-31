@@ -42,3 +42,9 @@ def get_all():
 def delete_all():
     for key in r.keys():
         r.delete(key)
+
+def confirm(key, data):
+    try:
+        r.hset(key, mapping={'confirmed_adults': data['confirmed_adults'], 'confirmed_children': data['confirmed_children'], 'confirmed': data['confirmed']})
+    except KeyError:
+        return ""
