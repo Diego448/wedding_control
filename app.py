@@ -14,13 +14,13 @@ def login():
     if request.method == 'POST':
         session['username'] = request.form['username']
         session['pass'] = request.form['password']
-        return redirect(url_for('homepage'))
+        return redirect(url_for('admin'))
     elif request.method == 'GET':
         return render_template('login.html')
 
-@app.route('/test')
-def test():
-    return render_template('parallax-template/index.html')
+@app.route('/invite/<id>')
+def invite(id):
+    return render_template('parallax-template/index.html', id=id)
 
 @app.route('/confirmation/<id>', methods=['POST', 'GET'])
 def confirmation(id=None):

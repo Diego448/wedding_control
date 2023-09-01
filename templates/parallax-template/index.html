@@ -13,7 +13,7 @@
 <body>
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo">Logo</a>
+      <a id="logo-container" href="#" class="brand-logo indigo-text text-darken-3">Z & D</a>
       <ul class="right hide-on-med-and-down">
         <li><a href="#">Navbar Link</a></li>
       </ul>
@@ -21,7 +21,7 @@
       <ul id="nav-mobile" class="sidenav">
         <li><a href="#">Navbar Link</a></li>
       </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3">menu</i></a>
     </div>
   </nav>
 
@@ -29,12 +29,12 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center teal-text text-lighten-2">Zaira & Diego</h1>
+        <h1 class="header center deep-purple-text text-lighten-1">Zaira & Diego</h1>
         <div class="row center">
           <h5 class="header col s12 light">Nuestra boda</h5>
         </div>
         <div class="row center">
-          <a href="confirmation" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Confirmar asistencia</a>
+          <a href="{{ url_for('confirmation', id=id) }}" id="download-button" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">Confirmar asistencia</a>
         </div>
         <br><br>
 
@@ -51,28 +51,28 @@
       <div class="row">
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">calendar_month</i></h2>
-            <h5 class="center">Aparta la fecha</h5>
+            <h2 class="center deep-purple-text"><i class="material-icons">calendar_month</i></h2>
+            <h5 class="center">Fecha</h5>
 
-            <p class="light">1 de Junio 2024</p>
+            <p class="light center-align">1 de Junio 2024</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">group</i></h2>
-            <h5 class="center">User Experience Focused</h5>
+            <h2 class="center deep-purple-text"><i class="material-icons">church</i></h2>
+            <h5 class="center">Ceremonia religiosa</h5>
 
-            <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+            <p class="light center-align">2:00pm, Templo de San Francisco, Capilla de Guadalupe</p>
           </div>
         </div>
 
         <div class="col s12 m4">
           <div class="icon-block">
-            <h2 class="center brown-text"><i class="material-icons">settings</i></h2>
-            <h5 class="center">Easy to work with</h5>
+            <h2 class="center deep-purple-text"><i class="material-icons">celebration</i></h2>
+            <h5 class="center">Fiesta</h5>
 
-            <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+            <p class="light center-align">3:00pm, La Rioja, Tepatitlan de Morelos</p>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Te invitamos a formar parte de nuestra nueva historia</h5>
         </div>
       </div>
     </div>
@@ -98,8 +98,28 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h4>Contact Us</h4>
-          <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+          <h4>Mapas</h4>
+          <div class="section">
+
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="icon-block">
+                  <h2 class="center deep-purple-text"><i class="material-icons">church</i></h2>
+                  <h5 class="center">Templo</h5>
+      
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7458.7811148529345!2d-102.59984180416339!3d20.815929627116823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842930759190c423%3A0x3c09bff00c4f2ea8!2sSan%20Francisco%20de%20As%C3%ADs!5e0!3m2!1ses-419!2smx!4v1693607044356!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+      
+              <div class="col s12 m6">
+                <div class="icon-block">
+                  <h2 class="center deep-purple-text"><i class="material-icons">celebration</i></h2>
+                  <h5 class="center">Festejo</h5>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8649409436375!2d-102.74491012390934!3d20.796751180795216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429291b2a2bc551%3A0x5cbb5ae67c665d2d!2sLa%20Rioja!5e0!3m2!1ses-419!2smx!4v1693607134253!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+      
+          </div>
         </div>
       </div>
 
@@ -111,19 +131,19 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          <h5 class="header col s12 light">Agradecemos tu compania</h5>
         </div>
       </div>
     </div>
     <div class="parallax"><img src={{ url_for('static', filename='background3.jpg') }} alt="Unsplashed background img 3"></div>
   </div>
 
-  <footer class="page-footer teal">
+  <footer class="page-footer indigo darken-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+          <h5 class="white-text">Acerca de nosotros</h5>
+          <p class="grey-text text-lighten-4">Proximamente</p>
 
 
         </div>
@@ -131,25 +151,19 @@
           <h5 class="white-text">Settings</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
             <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
-            <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+      Made by <a class="white-text text-lighten-3" href="http://materializecss.com">Materialize</a>
       </div>
     </div>
   </footer>

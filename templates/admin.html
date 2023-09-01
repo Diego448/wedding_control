@@ -12,7 +12,9 @@
         <h1>Z&D wedding</h1>
         <h3>Administrador</h3>
         <div class="row">
-            <a class="waves-effect waves-light btn modal-trigger" href="#addFamily">Agregar familia</a>
+            <div class="col s4 offset-m4 m4 offset-m5 l2 offset-l5">
+                <a class="waves-effect waves-light btn modal-trigger" href="#addFamily">Agregar familia</a>
+            </div>
         </div>
 
         <div class="row">
@@ -40,16 +42,38 @@
 
         <div id="addFamily" class="modal">
             <div class="modal-content">
-                <h4>Agregar familia</h4>
-                <form method="post" onsubmit="clearForm">
-                    <input type="text" name="id" id="id" required />
-                    <input type="text" name="name" id="name" required />
-                    <input type="text" name="desc" id="desc" required />
-                    <input type="number" name="adults" id="adults" min="1" max="10" required />
-                    <input type="number" name="children" id="children" min="0" max="10" required />
-                    <input type="tel" name="phone" id="phone" required />
-                    <button type="submit">Guardar</button>
-                </form>
+                <div class="row">
+                    <h4>Agregar familia</h4>
+                    <form method="post" onsubmit="clearForm">
+                        <div class="input-field col s12 m12 l12">
+                            <label for="id">id</label>
+                            <input type="text" name="id" id="id" required />
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <label for="name">nombre</label>
+                            <input type="text" name="name" id="name" required />
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <label for="desc">descripcion</label>
+                            <input type="text" name="desc" id="desc" required />
+                        </div> 
+                        <div class="input-field col s6 m6 l6">
+                            <label for="adults">adultos</label>
+                            <input type="number" name="adults" id="adults" min="1" max="10" required />
+                        </div>
+                        <div class="input-field col s6 m6 l6">
+                            <label for="children">menores</label>
+                            <input type="number" name="children" id="children" min="0" max="10" required />
+                        </div>
+                        <div class="input-field col s12 m12 l12">
+                            <label for="phone">telefono</label>
+                            <input type="tel" name="phone" id="phone" required />
+                        </div>
+                        <div class="input-field col s4 offset-s4 m2 offset-m5 l2 offset-l5">
+                            <button type="submit" class="btn">Guardar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Cancelar</a>
