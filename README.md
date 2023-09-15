@@ -4,9 +4,12 @@ Wedding control is a simple wedding managing app with support for a simple landi
 ## Environment setup
 ### Prerequisites
 * python 3.9+
+    * `sudo apt-get install python3.10` 
 * python venv
+    * `sudo apt-get install python3.10-venv`
 * git
-* redis
+    * `sudo apt-get install git`
+* [redis](https://redis.io/docs/getting-started/installation/install-redis-on-linux/)
 
 ### Quick setup
 * Clone this repo
