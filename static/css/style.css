@@ -6,6 +6,11 @@
  * Made By MaterializeCSS.com
  */
 
+html {
+  font-family: "The Seasons";
+  src: url("../fonts/Fontspring-theseasons-reg.otf");
+}
+
 nav ul a,
 nav .brand-logo {
   color: #444;
@@ -23,8 +28,7 @@ p {
   min-height: 380px;
   line-height: 0;
   height: 800px;
-  color: rgba(255,255,255,.9);
-  max-zoom: 50%;
+  color: rgba(189, 145, 247, 0.9);
 }
   .parallax-container .section {
     width: 100%;

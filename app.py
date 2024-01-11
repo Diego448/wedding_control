@@ -18,9 +18,21 @@ def login():
     elif request.method == 'GET':
         return render_template('login.html')
 
-@app.route('/invite/<id>')
+@app.route('/invite/<id>', methods=['GET', 'POST'])
 def invite(id):
-    return render_template('parallax-template/index.html', id=id)
+    if id:
+        invite_data = get(id)
+    else:
+        return {"message": "Invitacion no existente!"}
+    
+    if not invite_data:
+        return {"message": "Invitacion no existente!"}
+    
+    if request.method == 'GET':
+        return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=False)
+    elif request.method == 'POST':
+        confirm(id, request.form.to_dict())
+        return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=True)
 
 @app.route('/confirmation/<id>', methods=['POST', 'GET'])
 def confirmation(id=None):
@@ -33,7 +45,7 @@ def confirmation(id=None):
         return {"message": "Invitacion no existente!"}
     
     if request.method == 'GET':
-        return render_template('confirmation.html', invite_data=invite_data)
+        return render_template('parallax-template/index.html', invite_data=invite_data)
     elif request.method == 'POST':
         confirm(id, request.form.to_dict())
         return '{"message":"Asistencia confirmada, muchas gracias"}'
