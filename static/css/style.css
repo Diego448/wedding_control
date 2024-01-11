@@ -22,8 +22,9 @@ p {
 .parallax-container {
   min-height: 380px;
   line-height: 0;
-  height: auto;
+  height: 800px;
   color: rgba(255,255,255,.9);
+  max-zoom: 50%;
 }
   .parallax-container .section {
     width: 100%;
