@@ -11,25 +11,29 @@
   <link href={{ url_for('static', filename='css/style.css') }} type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo indigo-text text-darken-3">Z & D</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+  <div class="navbar-fixed">
+    <nav class="white" role="navigation" >
+      <div class="nav-wrapper container" >
+        
+              <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage.png') }}" alt="Unsplashed background img 1">
+          
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">Navbar Link</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3">menu</i></a>
-    </div>
-  </nav>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#">Navbar Link</a></li>
+        </ul> 
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3">menu</i></a>
+      </div>
+    </nav>
+  </div>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center deep-purple-text text-lighten-1">Zaira & Diego</h1>
+        <h1 class="header center light text-lighten-1">Zaira & Diego</h1>
         <div class="row center">
           <h5 class="header col s12 light">Nuestra boda</h5>
         </div>
@@ -40,7 +44,7 @@
 
       </div>
     </div>
-    <div class="parallax"><img src="{{ url_for('static', filename='background1.jpg') }}" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img width="100%" src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="Unsplashed background img 1"></div>
   </div>
 
 
