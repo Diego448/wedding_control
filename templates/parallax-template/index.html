@@ -9,38 +9,61 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href={{ url_for('static', filename='css/materialize.css') }}>
   <link href={{ url_for('static', filename='css/style.css') }} type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inspiration&family=Julius+Sans+One&family=Waterfall&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="white" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="#" class="brand-logo indigo-text text-darken-3">Z & D</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
+  <div class="navbar-fixed">
+    <nav class="white" role="navigation" >
+      <div class="nav-wrapper container" >
+        <ul class="left hide-on-med-and-down ">
+          <li><a href="#" class="julius-sans">INICIO</a></li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">LUGAR</a></li>
+        </ul>  
+          <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Unsplashed background img 1">
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">AISTENCIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">GALERIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">REGALOS</a></li>
+        </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3">menu</i></a>
-    </div>
-  </nav>
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="#" class="julius-sans">INICIO</a></li>
+          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+          <li><a href="#" class="julius-sans">LUGAR</a></li>
+          <li><a href="#" class="julius-sans">REGALOS</a></li>
+          <li><a href="#" class="julius-sans">GALERIA</a></li>
+          <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+
+        </ul> 
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3"></i></a>
+      </div>
+    </nav>
+  </div>
 
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center light text-lighten-1">Zaira & Diego</h1>
+        <h1 class="header center light text-lighten-1 waterfall-regular" >Zaira & Diego</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Nuestra boda</h5>
-        </div>
-        <div class="row center">
-          <a href="{{ url_for('confirmation', id=id) }}" id="download-button" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">Confirmar asistencia</a>
-        </div>
-        <br><br>
+          <h5 class="header col s12 light fun-font ">Nuestra boda</h5>
+          <h5 class="header col s12 light cursive-font">Nuestra boda</h5>
 
+        </div>
       </div>
     </div>
-    <div class="parallax"><img src="{{ url_for('static', filename='background1.jpg') }}" alt="Unsplashed background img 1"></div>
+    <div class="parallax"><img width="100%" src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="Unsplashed background img 1"></div>
   </div>
 
 
@@ -94,7 +117,6 @@
 
   <div class="container">
     <div class="section">
-
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
@@ -106,8 +128,9 @@
                 <div class="icon-block">
                   <h2 class="center deep-purple-text"><i class="material-icons">church</i></h2>
                   <h5 class="center">Templo</h5>
-      
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7458.7811148529345!2d-102.59984180416339!3d20.815929627116823!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x842930759190c423%3A0x3c09bff00c4f2ea8!2sSan%20Francisco%20de%20As%C3%ADs!5e0!3m2!1ses-419!2smx!4v1693607044356!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <a href="https://maps.app.goo.gl/8ZSx6jMHi81Uhepi9" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">
+                    <span><i class="material-icons">map</i> Templo de San Francisco de Asis</span>
+                  </a>
                 </div>
               </div>
       
@@ -115,14 +138,15 @@
                 <div class="icon-block">
                   <h2 class="center deep-purple-text"><i class="material-icons">celebration</i></h2>
                   <h5 class="center">Festejo</h5>
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3729.8649409436375!2d-102.74491012390934!3d20.796751180795216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429291b2a2bc551%3A0x5cbb5ae67c665d2d!2sLa%20Rioja!5e0!3m2!1ses-419!2smx!4v1693607134253!5m2!1ses-419!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <a href="https://maps.app.goo.gl/7TVTEPGi5B5f34i5A" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">
+                    <span><i class="material-icons">map</i> La Rioja</span>
+                  </a>
                 </div>
               </div>
-      
+            </div>
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
@@ -131,7 +155,44 @@
     <div class="section no-pad-bot">
       <div class="container">
         <div class="row center">
-          <h5 class="header col s12 light">Agradecemos tu compania</h5>
+          {% if confirmed is true %}
+          <h5 class="header col s12 light">Gracias por acompanarnos.</h5>
+          <h6 class="">Tu asistencia ha sido confirmada.</h6>
+          {% endif %}
+          <div class="row center">
+            {% if confirmed is false %}
+            <div class="container">
+              <h1>Confirma tu asistencia</h1>
+              <h3>{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h3>
+              <form method="post">
+                <div class="row">
+                  <div class="input-field col s12 m6 offset-m3 l6 offset-l3">
+                    <select id="confirmed" name="confirmed" required>
+                      <option value="" disabled selected>Confirma tu asistencia</option>
+                      <option value="true">Si</option>
+                      <option value="false">No</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s6 m3 offset-m3 l3 offset-l3">
+                    <label for="adults">Adultos</label>
+                    <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" required/>
+                  </div>
+                  <div class="input-field col s6 m3 l3">
+                    <label for="children">Menores</label>
+                    <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" required/>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s6 offset-s3 offset-m5 m2 l2 offset-l5">
+                    <button type="submit" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">Confirmar</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
@@ -173,6 +234,5 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src={{ url_for('static', filename='js/materialize.js') }}></script>
   <script src={{ url_for('static', filename='js/init.js') }}></script>
-
   </body>
 </html>
