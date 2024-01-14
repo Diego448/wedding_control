@@ -60,3 +60,50 @@ p {
 footer.page-footer {
   margin: 0;
 }
+
+
+.cursive-font {
+  font-family: "Eyesome Script";
+  src: url("../fonts/Eyesome/Eyesome-Script.otf"); 
+}
+
+.fun-font {
+  font-family: "Life Savers";
+  src: url("../fonts/LifeSavers/LifeSavers-Bold.ttf");
+}
+
+
+.waterfall-regular {
+  font-family: "Waterfall", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.julius-sans one-regular {
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inspiration-regular {
+  font-family: "Inspiration", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+
+

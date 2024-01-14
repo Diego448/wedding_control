@@ -9,22 +9,44 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href={{ url_for('static', filename='css/materialize.css') }}>
   <link href={{ url_for('static', filename='css/style.css') }} type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inspiration&family=Julius+Sans+One&family=Waterfall&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="navbar-fixed">
     <nav class="white" role="navigation" >
       <div class="nav-wrapper container" >
-        
-              <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage.png') }}" alt="Unsplashed background img 1">
-          
+        <ul class="left hide-on-med-and-down ">
+          <li><a href="#" class="julius-sans">INICIO</a></li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+        </ul>
+        <ul class="left hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">LUGAR</a></li>
+        </ul>  
+          <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Unsplashed background img 1">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#">Navbar Link</a></li>
+          <li><a href="#" class="julius-sans">AISTENCIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">GALERIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">REGALOS</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Navbar Link</a></li>
+          <li><a href="#" class="julius-sans">INICIO</a></li>
+          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+          <li><a href="#" class="julius-sans">LUGAR</a></li>
+          <li><a href="#" class="julius-sans">REGALOS</a></li>
+          <li><a href="#" class="julius-sans">GALERIA</a></li>
+          <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+
         </ul> 
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3">menu</i></a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3"></i></a>
       </div>
     </nav>
   </div>
@@ -33,9 +55,11 @@
     <div class="section no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center light text-lighten-1">Zaira & Diego</h1>
+        <h1 class="header center light text-lighten-1 waterfall-regular" >Zaira & Diego</h1>
         <div class="row center">
-          <h5 class="header col s12 light">Nuestra boda</h5>
+          <h5 class="header col s12 light fun-font ">Nuestra boda</h5>
+          <h5 class="header col s12 light cursive-font">Nuestra boda</h5>
+
         </div>
       </div>
     </div>
