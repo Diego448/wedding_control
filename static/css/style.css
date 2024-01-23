@@ -8,7 +8,7 @@
 
 html {
   font-family: "The Seasons";
-  src: url("../fonts/Fontspring-theseasons-reg.otf");
+  src: url("../fonts/Fontspring-theseasons-reg.otf") format("opentype");
 }
 
 nav ul a,
@@ -25,14 +25,15 @@ p {
 }
 
 .parallax-container {
-  min-height: 380px;
+  min-height: 350px;
   line-height: 0;
-  height: 800px;
+  min-width: max-content;
   color: rgba(189, 145, 247, 0.9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
+
+.parallax-container .section {
+  width: 100%;
+}
 
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
@@ -48,6 +49,9 @@ p {
   #index-banner .section {
     top: 0;
   }
+  .parallax-container {
+    height: 250px;
+  }
 }
 
 .icon-block {
@@ -60,18 +64,6 @@ p {
 footer.page-footer {
   margin: 0;
 }
-
-
-.cursive-font {
-  font-family: "Eyesome Script";
-  src: url("../fonts/Eyesome/Eyesome-Script.otf"); 
-}
-
-.fun-font {
-  font-family: "Life Savers";
-  src: url("../fonts/LifeSavers/LifeSavers-Bold.ttf");
-}
-
 
 .waterfall-regular {
   font-family: "Waterfall", cursive;

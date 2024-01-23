@@ -28,38 +28,39 @@
         </ul>  
           <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Unsplashed background img 1">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">AISTENCIA</a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">GALERIA</a></li>
-        </ul>
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">REGALOS</a></li>
-        </ul>
-
-        <ul id="nav-mobile" class="sidenav">
-          <li><a href="#" class="julius-sans">INICIO</a></li>
-          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
-          <li><a href="#" class="julius-sans">LUGAR</a></li>
-          <li><a href="#" class="julius-sans">REGALOS</a></li>
-          <li><a href="#" class="julius-sans">GALERIA</a></li>
           <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">GALERIA</a></li>
+        </ul>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" class="julius-sans">REGALOS</a></li>
+        </ul>
 
-        </ul> 
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons indigo-text text-darken-3"></i></a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+          <i class="material-icons">menu</i>
+        </a>
+        
       </div>
     </nav>
   </div>
 
+
+  <ul id="nav-mobile" class="sidenav">
+    <li><a href="{{url_for('login')}}" class="julius-sans">INICIO</a></li>
+    <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+    <li><a href="#" class="julius-sans">LUGAR</a></li>
+    <li><a href="#" class="julius-sans">REGALOS</a></li>
+    <li><a href="#" class="julius-sans">GALERIA</a></li>
+    <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+  </ul> 
+
   <div id="index-banner" class="parallax-container">
     <div class="section no-pad-bot">
       <div class="container">
-        <br><br>
         <h1 class="header center light text-lighten-1 waterfall-regular" >Zaira & Diego</h1>
         <div class="row center">
-          <h5 class="header col s12 light fun-font ">Nuestra boda</h5>
-          <h5 class="header col s12 light cursive-font">Nuestra boda</h5>
-
+          <h5 class="header col s12 light fun-font waterfall-regular">Nuestra boda</h5>
         </div>
       </div>
     </div>
@@ -209,15 +210,16 @@
 
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Settings</h5>
+          <h5 class="white-text">Mesas de regalos</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Liverpool</a></li>
+            <li><a class="white-text" href="#!">Amazon</a></li>
           </ul>
         </div>
         <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
+          <h5 class="white-text">Codigo de vestimenta</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Casual</a></li>
           </ul>
         </div>
       </div>
