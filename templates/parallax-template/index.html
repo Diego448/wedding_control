@@ -151,51 +151,52 @@
     </div>
   </div>
 
+  <div class="container">
+    <div class="row center">
+      {% if confirmed is true %}
+      <h5 class="header col s12 light">Gracias por acompanarnos.</h5>
+      <h6 class="">Tu asistencia ha sido confirmada.</h6>
+      {% endif %}
+      <div class="row center">
+        {% if confirmed is false %}
+        <div class="container">
+          <h1>Confirma tu asistencia</h1>
+          <h3>{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h3>
+          <form method="post">
+            <div class="row">
+              <div class="input-field col s12 m6 offset-m3 l6 offset-l3">
+                <select id="confirmed" name="confirmed" required>
+                  <option value="" disabled selected>Confirma tu asistencia</option>
+                  <option value="true">Si</option>
+                  <option value="false">No</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 m3 offset-m3 l3 offset-l3">
+                <label for="adults">Adultos</label>
+                <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" required/>
+              </div>
+              <div class="input-field col s6 m3 l3">
+                <label for="children">Menores</label>
+                <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" required/>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s6 offset-s3 offset-m5 m2 l2 offset-l5">
+                <button type="submit" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">Confirmar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 
   <div class="parallax-container valign-wrapper">
     <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          {% if confirmed is true %}
-          <h5 class="header col s12 light">Gracias por acompanarnos.</h5>
-          <h6 class="">Tu asistencia ha sido confirmada.</h6>
-          {% endif %}
-          <div class="row center">
-            {% if confirmed is false %}
-            <div class="container">
-              <h1>Confirma tu asistencia</h1>
-              <h3>{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h3>
-              <form method="post">
-                <div class="row">
-                  <div class="input-field col s12 m6 offset-m3 l6 offset-l3">
-                    <select id="confirmed" name="confirmed" required>
-                      <option value="" disabled selected>Confirma tu asistencia</option>
-                      <option value="true">Si</option>
-                      <option value="false">No</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s6 m3 offset-m3 l3 offset-l3">
-                    <label for="adults">Adultos</label>
-                    <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" required/>
-                  </div>
-                  <div class="input-field col s6 m3 l3">
-                    <label for="children">Menores</label>
-                    <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" required/>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="input-field col s6 offset-s3 offset-m5 m2 l2 offset-l5">
-                    <button type="submit" class="btn-large waves-effect waves-light indigo darken-3 lighten-1">Confirmar</button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            {% endif %}
-          </div>
-        </div>
-      </div>
+      
     </div>
     <div class="parallax"><img src={{ url_for('static', filename='background3.jpg') }} alt="Unsplashed background img 3"></div>
   </div>
