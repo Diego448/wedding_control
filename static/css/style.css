@@ -21,7 +21,7 @@ p {
 }
 
 .sidenav-trigger {
-  color: #26a69a;
+  color: #9b06e6;
 }
 
 .parallax-container {
@@ -95,7 +95,13 @@ footer.page-footer {
   font-style: normal;
 }
 
-
+.main-img {
+  background-image: url("../20240317_171719.jpg");
+  min-height: 350px;
+  max-height: 500px;
+  background-size: cover;
+  background-position: center center;
+}
 
 
 

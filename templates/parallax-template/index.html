@@ -26,7 +26,7 @@
         <ul class="left hide-on-med-and-down">
           <li><a href="#" class="julius-sans">LUGAR</a></li>
         </ul>  
-          <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Unsplashed background img 1">
+          <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Logo">
         <ul class="right hide-on-med-and-down">
           <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
         </ul>
@@ -55,16 +55,15 @@
     <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
   </ul> 
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h1 class="header center light text-lighten-1 waterfall-regular" >Zaira & Diego</h1>
-        <div class="row center">
-          <h5 class="header col s12 light fun-font waterfall-regular">Nuestra boda</h5>
-        </div>
-      </div>
+  <div class="container">
+    <h1 class="header center light text-lighten-1 deep-purple-text waterfall-regular" >Zaira & Diego</h1>
+    <div class="row center">
+      <h5 class="header col s12 light fun-font waterfall-regular">Nuestra boda</h5>
     </div>
-    <div class="parallax"><img width="100%" src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="Unsplashed background img 1"></div>
+
+  <div class="container">
+    <!--<img src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="">-->
+    <div class="main-img"></div>
   </div>
 
 
@@ -113,7 +112,9 @@
         </div>
       </div>
     </div>
-    <div class="parallax"><img src={{ url_for('static', filename='background2.jpg') }} alt="Unsplashed background img 2"></div>
+    <div class="parallax">
+      <img src={{ url_for('static', filename='background2.jpg') }} alt="Unsplashed background img 2">
+    </div>
   </div>
 
   <div class="container">
@@ -192,13 +193,6 @@
         {% endif %}
       </div>
     </div>
-  </div>
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      
-    </div>
-    <div class="parallax"><img src={{ url_for('static', filename='background3.jpg') }} alt="Unsplashed background img 3"></div>
   </div>
 
   <footer class="page-footer indigo darken-3">
