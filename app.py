@@ -23,32 +23,16 @@ def invite(id):
     if id:
         invite_data = get(id)
     else:
-        return {"message": "Invitacion no existente!"}
+        return render_template('non-existent.html')
     
     if not invite_data:
-        return {"message": "Invitacion no existente!"}
+        return render_template('non-existent.html')
     
     if request.method == 'GET':
         return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=False)
     elif request.method == 'POST':
         confirm(id, request.form.to_dict())
         return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=True)
-
-@app.route('/confirmation/<id>', methods=['POST', 'GET'])
-def confirmation(id=None):
-    if id:
-        invite_data = get(id)
-    else:
-        return {"message": "Invitacion no existente!"}
-    
-    if not invite_data:
-        return {"message": "Invitacion no existente!"}
-    
-    if request.method == 'GET':
-        return render_template('parallax-template/index.html', invite_data=invite_data)
-    elif request.method == 'POST':
-        confirm(id, request.form.to_dict())
-        return '{"message":"Asistencia confirmada, muchas gracias"}'
     
 @app.route('/admin', methods=['POST', 'GET'])
 def admin():
