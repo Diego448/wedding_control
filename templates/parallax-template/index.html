@@ -161,8 +161,8 @@
       <div class="row center">
         {% if confirmed is false %}
         <div class="container">
-          <h1>Confirma tu asistencia</h1>
-          <h3>{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h3>
+          <h3>Confirma tu asistencia</h3>
+          <h4>{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h4>
           <form method="post">
             <div class="row">
               <div class="input-field col s12 m6 offset-m3 l6 offset-l3">
@@ -193,6 +193,11 @@
         {% endif %}
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <h2>Galeria</h2>
+    <p>Proximamente</p>
   </div>
 
   <footer class="page-footer indigo darken-3">
