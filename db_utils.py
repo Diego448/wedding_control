@@ -29,6 +29,10 @@ r = redis.Redis(charset="utf-8", decode_responses=True)
 def add(data):
     r.hset(data['id'], mapping=data)
 
+def autoadd(data):
+    key = str(len(r.keys()) + 1).zfill(3)
+    r.hset(key, mapping=data)
+
 def get(key):
     return r.hgetall(key)
 
