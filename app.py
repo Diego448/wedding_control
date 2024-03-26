@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from db_utils import get_all, add, get, confirm
+from db_utils import get_all, add, get, confirm, autoadd
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -48,5 +48,5 @@ def admin():
         return render_template('admin.html', data=data)
     
     elif request.method == 'POST':
-        add(request.form.to_dict())
+        autoadd(request.form.to_dict())
         return redirect('admin')
