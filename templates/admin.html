@@ -27,6 +27,11 @@
                     <p>Adultos: {{ entry['adults'] }}</p>
                     <p>Menores: {{ entry['children'] }}</p>
                     <p>Tel: {{ entry['phone'] }}</p>
+                    <p>URL: zairaydiego.net/invite/{{ entry['id'] }}
+                        <button class="btn btn-small"  onclick="writeClipboardText('zairaydiego.net/invite/{{ entry['id'] }}')">
+                            <i class="material-icons">content_copy</i>
+                        </button> 
+                    </p>
                     {% if entry['confirmed'] == 'true' %}
                     <a href="#!" class="secondary-content"><i class="material-icons">check</i></a>
                     {% elif entry['confirmed'] == 'false' %}
