@@ -31,6 +31,7 @@ def add(data):
 
 def autoadd(data):
     key = str(len(r.keys()) + 1).zfill(3)
+    data['id'] = key
     r.hset(key, mapping=data)
 
 def get(key):
