@@ -61,9 +61,14 @@ def get_totals(category: str) -> dict:
     children_total_confirmed = 0
     
     for key in r.keys():
-        adults_total += int(r.hget(key, 'confirmed_adults'))
-        children_total += int(r.hget(key, 'confirmed_children'))
+        adults_total_confirmed += int(r.hget(key, 'confirmed_adults'))
+        children_total_confirmed += int(r.hget(key, 'confirmed_children'))
         adults_total += int(r.hget(key, 'adults'))
         children_total += int(r.hget(key, 'children'))
 
-    return {'adults_total': adults_total, 'children_total': children_total}
+    return {
+            'adults_total': adults_total, 
+            'children_total': children_total, 
+            'adults_total_confirmed': adults_total_confirmed, 
+            'children_total_confirmed': children_total_confirmed
+        }

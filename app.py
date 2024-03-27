@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, session, redirect, url_for
-from db_utils import get_all, add, get, confirm, autoadd
+from db_utils import get_all, add, get, confirm, autoadd, get_totals
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -44,7 +44,7 @@ def admin():
             return redirect(url_for('login'))
         
         data = get_all()
-        totals = 
+        totals = get_totals
 
         return render_template('admin.html', data=data)
     
