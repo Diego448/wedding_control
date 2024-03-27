@@ -44,9 +44,9 @@ def admin():
             return redirect(url_for('login'))
         
         data = get_all()
-        totals = get_totals
+        totals = get_totals()
 
-        return render_template('admin.html', data=data)
+        return render_template('admin.html', data=data, totals=totals)
     
     elif request.method == 'POST':
         autoadd(request.form.to_dict())

@@ -54,17 +54,20 @@ def confirm(key, data):
     except KeyError:
         return ""
     
-def get_totals(category: str) -> dict:
+def get_totals() -> dict:
     adults_total = 0
     children_total = 0
     adults_total_confirmed = 0
     children_total_confirmed = 0
     
     for key in r.keys():
-        adults_total_confirmed += int(r.hget(key, 'confirmed_adults'))
-        children_total_confirmed += int(r.hget(key, 'confirmed_children'))
-        adults_total += int(r.hget(key, 'adults'))
-        children_total += int(r.hget(key, 'children'))
+        try:
+            adults_total += int(r.hget(key, 'adults'))
+            children_total += int(r.hget(key, 'children'))
+            adults_total_confirmed += int(r.hget(key, 'confirmed_adults'))
+            children_total_confirmed += int(r.hget(key, 'confirmed_children'))
+        except TypeError:
+            continue
 
     return {
             'adults_total': adults_total, 
