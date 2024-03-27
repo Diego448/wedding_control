@@ -67,8 +67,13 @@ footer.page-footer {
 a.ex1 {
   font-size: 70px;
 }
+
 a.ex2 {
   font-size: 55px;
+}
+
+a.ex3 {
+  font-size: 20px;
 }
 
 .waterfall-regular {
@@ -128,17 +133,22 @@ a.ex2 {
 }
 
 .main-img {
-  background-image: url("../20240317_171719.jpg");
+  background-image: url("../OppeningPhotoB&W.jpg");
   min-height: 630px;
   max-height: 100%;
   background-size: cover;
   background-position: center center;
 }
 
-.bottom-tag {
+.margin-tag {
+    margin:20%;
     position: absolute;
-    bottom: 0;
-    
+}
+
+.bottom-tag {
+  margin:20%;
+  position: absolute;
+  bottom:0;
 }
 
 
