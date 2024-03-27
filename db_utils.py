@@ -53,3 +53,17 @@ def confirm(key, data):
         r.hset(key, mapping={'confirmed_adults': data['confirmed_adults'], 'confirmed_children': data['confirmed_children'], 'confirmed': data['confirmed']})
     except KeyError:
         return ""
+    
+def get_totals(category: str) -> dict:
+    adults_total = 0
+    children_total = 0
+    adults_total_confirmed = 0
+    children_total_confirmed = 0
+    
+    for key in r.keys():
+        adults_total += int(r.hget(key, 'confirmed_adults'))
+        children_total += int(r.hget(key, 'confirmed_children'))
+        adults_total += int(r.hget(key, 'adults'))
+        children_total += int(r.hget(key, 'children'))
+
+    return {'adults_total': adults_total, 'children_total': children_total}

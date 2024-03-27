@@ -44,6 +44,7 @@ def admin():
             return redirect(url_for('login'))
         
         data = get_all()
+        totals = 
 
         return render_template('admin.html', data=data)
     
