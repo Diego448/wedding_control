@@ -64,9 +64,22 @@ p {
 footer.page-footer {
   margin: 0;
 }
+a.ex1 {
+  font-size: 70px;
+}
+a.ex2 {
+  font-size: 55px;
+}
 
 .waterfall-regular {
   font-family: "Waterfall", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-oficial {
+  font-family: "Cinzel", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
@@ -83,11 +96,24 @@ footer.page-footer {
   font-style: normal;
 }
 
+.cormorant-upright-regular {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cormorant-upright-medium {
+  font-family: "Cormorant Upright", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .julius-sans one-regular {
   font-family: "Julius Sans One", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
+
 
 .inspiration-regular {
   font-family: "Inspiration", cursive;
@@ -95,13 +121,24 @@ footer.page-footer {
   font-style: normal;
 }
 
+.mrs-saint-delafield-regular {
+  font-family: "Mrs Saint Delafield", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .main-img {
   background-image: url("../20240317_171719.jpg");
-  min-height: 350px;
-  max-height: 500px;
+  min-height: 630px;
+  max-height: 100%;
   background-size: cover;
   background-position: center center;
 }
 
+.bottom-tag {
+    position: absolute;
+    bottom: 0;
+    
+}
 
 
