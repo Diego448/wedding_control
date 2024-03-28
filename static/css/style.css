@@ -65,14 +65,17 @@ footer.page-footer {
   margin: 0;
 }
 a.ex1 {
-  font-size: 70px;
+  font-size: 83px;
 }
 
 a.ex2 {
-  font-size: 55px;
+  font-size: 60px;
 }
 
 a.ex3 {
+  font-size: 27px;
+}
+a.ex4 {
   font-size: 20px;
 }
 
@@ -151,4 +154,11 @@ a.ex3 {
   bottom:0;
 }
 
-
+@media screen and (min-width: 600px) {
+  .ocultar-div{
+      display:none;
+  }
+  a.ex4 {
+    font-size: 27px;
+  }
+}
