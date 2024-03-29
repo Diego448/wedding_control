@@ -11,30 +11,30 @@
   <link href={{ url_for('static', filename='css/style.css') }} type="text/css" rel="stylesheet" media="screen,projection"/>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inspiration&family=Julius+Sans+One&family=Waterfall&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inspiration&family=Julius+Sans+One&family=Waterfall&display=swap&family=Cinzel:wght@400..900&family=Cormorant+Upright:wght@300;400;500;600;700&family=Mrs+Saint+Delafield&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="navbar-fixed">
+  <div class="nav-wrapper">
     <nav class="white" role="navigation" >
       <div class="nav-wrapper container" >
         <ul class="left hide-on-med-and-down ">
-          <li><a href="#start" class="julius-sans">INICIO</a></li>
+          <li><a href="#start" class="cinzel-oficial">INICIO</a></li>
         </ul>
         <ul class="left hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">PRESENTACION</a></li>
+          <li><a href="#" class="cinzel-oficial">PRESENTACION</a></li>
         </ul>
         <ul class="left hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">LUGAR</a></li>
+          <li><a href="#" class="cinzel-oficial">LUGAR</a></li>
         </ul>  
-          <img class="brand-logo center responsive-img" width="100" src="{{ url_for('static', filename='topImage1.png') }}" alt="Logo">
+          <img class="brand-logo center responsive-img" width="50px" src="{{ url_for('static', filename='Monograma.png') }}" alt="Logo">
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+          <li><a href="#" class="cinzel-oficial">ASISTENCIA</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">GALERIA</a></li>
+          <li><a href="#" class="cinzel-oficial">GALERIA</a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-          <li><a href="#" class="julius-sans">REGALOS</a></li>
+          <li><a href="#" class="cinzel-oficial">REGALOS</a></li>
         </ul>
 
         <a href="#" data-target="nav-mobile" class="sidenav-trigger">
@@ -47,55 +47,117 @@
 
 
   <ul id="nav-mobile" class="sidenav">
-    <li><a href="#start" class="julius-sans">INICIO</a></li>
-    <li><a href="#" class="julius-sans">PRESENTACION</a></li>
-    <li><a href="#" class="julius-sans">LUGAR</a></li>
-    <li><a href="#" class="julius-sans">REGALOS</a></li>
-    <li><a href="#" class="julius-sans">GALERIA</a></li>
-    <li><a href="#" class="julius-sans">ASISTENCIA</a></li>
+    <li><a href="#start" class="cinzel-oficial">INICIO</a></li>
+    <li><a href="#" class="cinzel-oficial">PRESENTACION</a></li>
+    <li><a href="#" class="cinzel-oficial">LUGAR</a></li>
+    <li><a href="#" class="cinzel-oficial">REGALOS</a></li>
+    <li><a href="#" class="cinzel-oficial">GALERIA</a></li>
+    <li><a href="#" class="cinzel-oficial">ASISTENCIA</a></li>
   </ul> 
 
-  <div class="container" id="start">
-    <h1 class="header center light text-lighten-1 deep-purple-text waterfall-regular" >Zaira & Diego</h1>
-    <div class="row center">
-      <h5 class="header col s12 light fun-font waterfall-regular">Nuestra boda</h5>
+  <div id="start">
+    
+
+    <div class="row">
+    <!--<img src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="">-->
+      <div class="main-img">
+        
+        <div class="container col s12 margin-tag">
+          <!-- <div class="center">
+            <a class="ex3 header center col s12 light cormorant-upright-regular white-text">Nuestra boda</a>
+          </div>-->
+            <div class="col s12 center">
+              <a class="ex1 center light text-lighten-1 white-text waterfall-regular" >Zaira </a><a class="ex2 center light text-lighten-1 white-text mrs-saint-delafield-regular">&</a> <a class="ex1 center light text-lighten-1 white-text waterfall-regular"> &nbsp;Diego</a>
+            </div>
+        </div>
+          <div class="col s12 center bottom-tag">
+            <div class="center">
+              <a class="ex3 header center light cinzel-oficial black-text">01 DE JUNIO 2024</a>
+            </div>
+          </div>
+        
+      </div>
     </div>
 
-  <div class="container">
-    <!--<img src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="">-->
-    <div class="main-img"></div>
-  </div>
 
-
-  <div class="container">
+  <div >
     <div class="section">
 
       <!--   Icon Section   -->
       <div class="row">
+        <div class="center col s12">
+          <img class="center responsive-img" width="200px" src="{{ url_for('static', filename='MonogramaDetails.png') }}" >
+        </div>
+        <div class="center col s12">
+          <h5 class="header center col s12 light cormorant-upright-regular "> «Nos complace invitarte a nuestra boda.» </h5>
+        </div>
+      </div>
+      <div class="row section center ">
+        <div class="col s12 ">
+          <h4 class="header center light cormorant-upright-regular ">NUESTROS PADRES</h4>
+          <br>
+        </div>
+          <div class="col s12 m6">
+            <a class="ex4  black-text cormorant-upright-regular" >Angeles Franco García</a>
+            <br>
+            <a class="ex4  black-text cormorant-upright-regular" >Gustavo Jiménez Avalos</a>
+          </div>
+          <div class="col s12 ocultar-div">
+            <a class="ex4 black-text cormorant-upright-regular" >&</a>
+          </div>
+          <div class="col s12 m6">
+            <a class="ex4 black-text cormorant-upright-regular" >Teresa Gómez Vázquez</a>
+            <br>
+            <a class="ex4 black-text cormorant-upright-regular" >Joel Serrano Hernández</a>
+            <br><br>
+          </div>
+      </div>
+      <div class="row #ede7f6 deep-purple lighten-5">
+        <div class="col s12 ">
+          <h3 class="header center light cormorant-upright-regular ">ITINERARIO</h3>
+        </div>
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center deep-purple-text"><i class="material-icons">calendar_month</i></h2>
-            <h5 class="center">Fecha</h5>
+          <div class="icon-block center">
+            <h2 class="center brown-text text-lighten-3"><i class="material-icons">church</i></h2>
+            <h4 class="header center light cormorant-upright-regular ">CEREMONIA</h4>
+            
+            <a class="ex4 center black-text cormorant-upright-regular" >Templo de San Francisco</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >Capilla de Guadalupe, Jal.</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >1:00 p.m.</a><br><br>
 
-            <p class="light center-align">1 de Junio 2024</p>
+            <a href="https://maps.app.goo.gl/8ZSx6jMHi81Uhepi9" class="btn-large waves-effect waves-light brown lighten-3">
+              <span> VER MAPA </span>
+            </a>
           </div>
         </div>
 
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center deep-purple-text"><i class="material-icons">church</i></h2>
-            <h5 class="center">Ceremonia religiosa</h5>
+          <div class="icon-block center">
+            <h2 class="center brown-text text-lighten-3"><i class="material-icons">local_bar</i></h2>
+            <h4 class="header center light cormorant-upright-regular ">CÓCTEL</h4>
 
-            <p class="light center-align">1:00pm, Templo de San Francisco, Capilla de Guadalupe</p>
+            <a class="ex4 center black-text cormorant-upright-regular" >Terraza la Rioja</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >Tepatitlán de Morelos, Jal.</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >3:00 p.m.</a><br><br>
+
+            <a href="https://maps.app.goo.gl/7TVTEPGi5B5f34i5A" class="btn-large waves-effect waves-light brown lighten-3 ">
+              <span> VER MAPA </span>
+            </a>
           </div>
         </div>
 
         <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center deep-purple-text"><i class="material-icons">celebration</i></h2>
-            <h5 class="center">Fiesta</h5>
+          <div class="icon-block center">
+            <h2 class="center brown-text text-lighten-3"><i class="material-icons">celebration</i></h2>
+            <h4 class="header center light cormorant-upright-regular ">RECEPCIÓN</h4>
 
-            <p class="light center-align">3:00pm, La Rioja, Tepatitlan de Morelos</p>
+            <a class="ex4 center black-text cormorant-upright-regular" >Terraza la Rioja</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >Tepatitlán de Morelos, Jal.</a><br>
+            <a class="ex4 center black-text cormorant-upright-regular" >4:00 p.m.</a><br><br>
+
+            <a href="https://maps.app.goo.gl/7TVTEPGi5B5f34i5A" class="btn-large waves-effect waves-light brown lighten-3 ">
+              <span> VER MAPA </span>
+            </a><br><br>
           </div>
         </div>
       </div>
