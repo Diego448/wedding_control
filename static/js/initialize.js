@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var instances = M.Modal.init(elems, {onCloseEnd: function() {
         console.log('Modal closed!');
     }});
+    var tabs = document.querySelector('.tabs');  
+    var tabInstances = M.Tabs.init(tabs, {});
 });
 
 async function writeClipboardText(text) {
