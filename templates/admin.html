@@ -13,6 +13,15 @@
         <h1>Z&D wedding</h1>
         <h3>Administrador</h3>
 
+        <div class="row">
+            <input type="number" id="countdownDays" value="99" class="col s2 m2 l1 offset-l3 right-align" disabled/>
+            <input type="text" value="días" class="col s2 m1 l1" disabled />
+            <input type="number" id="countdownHours" value="23" class="col s2 m2 l1 right-align" disabled/>
+            <input type="text" value="horas" class="col s2 m1 l1" disabled />
+            <input type="number" id="countdownMinutes" value="59" class="col s2 m2 l1 right-align" disabled/>
+            <input type="text" value="minutos" class="col s2 m2 l1" disabled />
+        </div>
+
         <div class="card">
             <div class="card-content">
                 <h5>Confirmaciones totales</h5>
@@ -108,5 +117,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src={{ url_for('static', filename='js/initialize.js') }}></script>
+    <script src={{ url_for('static', filename='js/countdown.js') }}></script>
 </body>
 </html>
