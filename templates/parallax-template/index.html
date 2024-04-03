@@ -58,24 +58,33 @@
   <div id="start">
     
 
-    <div class="row">
+    <div class="section">
     <!--<img src="{{ url_for('static', filename='ZyDbg1.png') }}" alt="">-->
       <div class="main-img">
-        
-        <div class="container col s12 margin-tag">
-          <!-- <div class="center">
-            <a class="ex3 header center col s12 light cormorant-upright-regular white-text">Nuestra boda</a>
-          </div>-->
-            <div class="col s12 center">
-              <a class="ex1 center light text-lighten-1 white-text waterfall-regular" >Zaira </a><a class="ex2 center light text-lighten-1 white-text mrs-saint-delafield-regular">&</a> <a class="ex1 center light text-lighten-1 white-text waterfall-regular"> &nbsp;Diego</a>
-            </div>
+        <div class="row">
+          <div class="col s12 center">
+            <a class="ex1 center light text-lighten-1 white-text waterfall-regular" >Zaira </a><a class="ex2 center light text-lighten-1 white-text mrs-saint-delafield-regular">&</a> <a class="ex1 center light text-lighten-1 white-text waterfall-regular"> &nbsp;Diego</a>
+          </div>
         </div>
-          <div class="col s12 center bottom-tag">
-            <div class="center">
-              <a class="ex3 header center light cinzel-oficial black-text">01 DE JUNIO 2024</a>
+        <br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="row transparencia">
+          <div class="col s12 center ">
+            <br>
+            <a class="ex3 header center light cinzel-oficial grey-text text-darken-3 ">01 DE JUNIO 2024</a>
+          </div>
+       
+          <div class="col s12 center">
+            <div id="countdown">
+                <span id="days" class="cinzel-oficial span-size "></span>
+                <span id="hours" class="cinzel-oficial span-size "></span>
+                <span id="minutes" class="cinzel-oficial span-size "></span>
+                <span id="seconds" class="cinzel-oficial span-size"></span>
+              <div class="row ">
+                <a class="ex6 cinzel-oficial text-lighten-1 white-text ">DÍAS &nbsp;&nbsp; HRS &nbsp;&nbsp; MIN &nbsp;&nbsp; SEG</a>
+              </div>
             </div>
           </div>
-        
+        </div>
       </div>
     </div>
 
@@ -108,7 +117,7 @@
         </div>
       
         <div class="center col s12 ">
-          <h5 class="header center col s12 light cormorant-upright-regular "> «Nos complace invitarte a nuestra boda.» </h5>
+          <h5 class="header center col s12 light cormorant-upright-regular " style="color: #A097AE; font-weight: bolder;" > «Nos complace invitarte a nuestra boda.» </h5>
         </div>
       </div>
       <div class="row section center ">
@@ -117,7 +126,7 @@
           <br>
         </div>
           <div class="col s12 m6">
-            <a class="ex4  black-text cormorant-upright-regular" >Patty González Orozco</a>
+            <a class="ex4  black-text cormorant-upright-regular" >Patricia González Orozco</a>
             <br>
             <a class="ex4  black-text cormorant-upright-regular" >Miguel Angel Navarro Becerra</a>
           </div>
@@ -184,50 +193,28 @@
 
 
 
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h5 class="header col s12 light">Te invitamos a formar parte de nuestra nueva historia</h5>
-        </div>
-      </div>
-    </div>
+  <!--<div class="parallax-container valign-wrapper">
+   
     <div class="parallax">
       <img src={{ url_for('static', filename='background1.jpg') }} alt="Unsplashed background img 2">
     </div>
-  </div>
+  </div>-->
 
-    <div class="section">
+  <div class="container" >
     <div class="row">
       <div class="slider">
         <ul class="slides">
           <li>
-            <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
+            <img src={{ url_for('static', filename='background1.jpg') }}> <!-- random image -->
           </li>
           <li>
             <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
-            <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
           </li>
           <li>
             <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
-            <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
           </li>
           <li>
             <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
-            <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-            </div>
           </li>
         </ul>
       </div>
@@ -239,11 +226,10 @@
       <div class="row">
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h3 class="header center light cormorant-upright-regular ">MESA DE REGALOS</h3>
+          <h4 class="header center light cormorant-upright-regular ">SUGERENCIA DE REGALOS</h4>
           <div class="section">
-
             <div class="row">
-              
+              <a href=""></a>
             </div>
           </div>
         </div>
@@ -335,5 +321,9 @@
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src={{ url_for('static', filename='js/materialize.js') }}></script>
   <script src={{ url_for('static', filename='js/init.js') }}></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src={{ url_for('static', filename='js/initialize.js') }}></script>
+  <script src={{ url_for('static', filename='js/countdown.js') }}></script>
+
   </body>
 </html>

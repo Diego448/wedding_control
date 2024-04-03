@@ -82,6 +82,22 @@ a.ex4 {
 a.ex5 {
   font-size: 15px;
 }
+a.ex6 {
+  font-size: 25px;
+}
+
+span.span-size {
+  display: inline-block;
+  width: 70px;
+  font-size: 35px;
+  color:white;
+}
+
+.transparencia{
+  background:rgba(192, 192, 192, 0.589);
+}
+
+
 .waterfall-regular {
   font-family: "Waterfall", cursive;
   font-weight: 400;
@@ -140,7 +156,7 @@ a.ex5 {
 
 .main-img {
   background-image: url("../OppeningPhotoB&W.jpg");
-  min-height: 630px;
+  min-height: 700px;
   max-height: 100%;
   background-size: cover;
   background-position: center center;
@@ -164,6 +180,7 @@ a.ex5 {
   a.ex4 {
     font-size: 25px;
   }
+  
 }
 
 .blue-darkgray-color{
@@ -177,4 +194,8 @@ a.ex5 {
 
 .purple-color{
   background-color: #A097AE;
+}
+
+.active{
+  background-color: #A097AE !important;
 }
