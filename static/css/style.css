@@ -79,6 +79,9 @@ a.ex4 {
   font-size: 20px;
 }
 
+a.ex5 {
+  font-size: 15px;
+}
 .waterfall-regular {
   font-family: "Waterfall", cursive;
   font-weight: 400;
@@ -159,6 +162,19 @@ a.ex4 {
       display:none;
   }
   a.ex4 {
-    font-size: 27px;
+    font-size: 25px;
   }
+}
+
+.blue-darkgray-color{
+  background-color: #494E76 !important;
+  
+}
+
+.blue-lihtgray-color{
+  color: #494e768e;
+}
+
+.purple-color{
+  background-color: #A097AE;
 }
