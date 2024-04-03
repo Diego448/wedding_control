@@ -167,7 +167,8 @@ a.ex5 {
 }
 
 .blue-darkgray-color{
-  background-color: #494E76;
+  background-color: #494E76 !important;
+  
 }
 
 .blue-lihtgray-color{
