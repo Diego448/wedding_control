@@ -1,27 +1,17 @@
-function updateCountdown() {
-    let daysElem = document.getElementById("countdownDays");
-    let hoursElem = document.getElementById("countdownHours");
-    let minutesElem = document.getElementById("countdownMinutes");
+function countdown() {
+    const targetDate = new Date("2024-06-01 13:00:00").getTime();
+    const now = new Date().getTime();
+    const timeLeft = targetDate - now;
 
-    let currentDate = new Date();
-    let weddingDate = new Date("06/01/2024");
-    let timeDiff = Math.abs(currentDate - weddingDate);
-    let totalDiff = Math.ceil(timeDiff / (1000 * 60));
-    let daysDiff = Math.floor((totalDiff / (24 * 60)));
-    let hourDiff = Math.floor((totalDiff / 60) - (daysDiff * 24));
-    let minuteDiff = (totalDiff) - (daysDiff * 60 * 24) - (hourDiff * 60);
-    
-    minutesElem.value = minuteDiff;
-    hoursElem.value = hourDiff;
-    daysElem.value = daysDiff;
-    console.log(totalDiff);
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
 }
 
-function callCountdown() {
-    setInterval(updateCountdown, 60000);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    updateCountdown();
-    callCountdown();
-});
+setInterval(countdown, 1000);
