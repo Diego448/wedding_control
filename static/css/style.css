@@ -196,6 +196,44 @@ span.span-size {
   background-color: #A097AE;
 }
 
+.zyd-purple-text {
+  color: #A097AE;
+}
+
 .active{
   background-color: #A097AE !important;
+}
+
+#gallery {
+  min-height: 700px;
+  max-height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+input.select-dropdown {
+  color: white;
+  font-family: "Cormorant Upright", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+svg path:first-child {
+  fill: white;
+}
+
+input[type=number] {
+  color: white;
+}
+
+.logo {
+  max-width: 240px;
+}
+
+.liverpool-pink {
+  background-color: #e83e8c;
+  
+}
+
+.liverpool-logo {
+  padding-top: 1rem;
 }
