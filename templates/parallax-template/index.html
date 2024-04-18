@@ -47,6 +47,7 @@
 
 
   <ul id="nav-mobile" class="sidenav">
+    <li><a class="sidenav-close" href="#!"><i class="material-icons">close</i></a></li>
     <li><a href="#start" class="cinzel-oficial">INICIO</a></li>
     <li><a href="#" class="cinzel-oficial">PRESENTACION</a></li>
     <li><a href="#" class="cinzel-oficial">LUGAR</a></li>
@@ -130,7 +131,7 @@
         <a class="ex4 black-text cormorant-upright-regular" >&</a>
       </div>
       <div class="col s12 m6">
-        <a class="ex4 black-text cormorant-upright-regular" >Rus Castellanos Ibarra</a>
+        <a class="ex4 black-text cormorant-upright-regular" >Rusbelina Castellanos Ibarra</a>
         <br>
         <a class="ex4 black-text cormorant-upright-regular" >Joel Gómez Vázquez</a>
         <br><br>
@@ -192,37 +193,31 @@
       <div class="slider">
         <ul class="slides">
           <li>
-            <img src="{{ url_for('static', filename='ZyD01.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD01.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD02.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD02.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD03.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD03.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD04.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD04.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD05.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD05.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD06.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD06.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD07.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD08.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD08.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD09.jpg') }}">
           </li>
           <li>
-            <img src="{{ url_for('static', filename='ZyD09.jpg') }}"">
-          </li>
-          <li>
-            <img src="{{ url_for('static', filename='ZyD10.jpg') }}"">
-          </li>
-          <li>
-            <img src="{{ url_for('static', filename='ZyD11.jpg') }}"">
+            <img src="{{ url_for('static', filename='ZyD10.jpg') }}">
           </li>
         </ul>
       </div>
@@ -256,13 +251,13 @@
     <div class="container">
       <div class="row center">
         {% if confirmed is true %}
-        <h5 class="header col s12 light waterfall-regular">Gracias por acompanarnos.</h5>
+        <h5 class="header col s12 light cormorant-upright-regular">¡GRACIAS POR ACOMPAÑARNOS!</h5>
         <h6 class="cormorant-upright-regular">Tu asistencia ha sido confirmada.</h6>
         {% endif %}
         <div class="row center">
           {% if confirmed is false %}
           <div class="container">
-            <h3 class="cormorant-upright-regular">Confirma tu asistencia</h3>
+            <h3 class="cormorant-upright-regular">CONFIRMA TU ASISTENCIA</h3>
             <h4 class="cormorant-upright-regular">{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h4>
             <form method="post">
               <div class="row">
