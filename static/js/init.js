@@ -4,13 +4,11 @@
     $('.sidenav').sidenav();
     $('.parallax').parallax();
     $('.slider').slider();
+    $('.carousel.carousel-slider').carousel({
+      fullWidth: true
+    });
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
-
-    instances.pause();
-    instances.start();
-    instances.next();
-    instances.prev();
 
   }); // end of document ready
 })(jQuery); // end of jQuery name space
