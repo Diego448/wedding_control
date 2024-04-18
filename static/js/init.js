@@ -3,10 +3,11 @@
 
     $('.sidenav').sidenav();
     $('.parallax').parallax();
-    $('.slider').slider();
-    $('.carousel.carousel-slider').carousel({
-      fullWidth: true
+    $('.slider').slider({
+      indicators: false,
+      duration: 250
     });
+
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 
