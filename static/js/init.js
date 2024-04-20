@@ -11,5 +11,24 @@
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 
+    $(window).scroll(function() {
+      if ($(this).scrollTop() > 300) {
+          $('.scroll-top').fadeIn('slow');    } else {
+          $('.scroll-top').fadeOut('slow');
+      }
+    });
+    $('.scroll-top').click(function(event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 600);
+    });
+
+    $(window).on('beforeunload', function() {
+
+      window.setTimeout(function() {
+      $(window).scrollTop(0); 
+    }, 0);
+    
+    });
+
   }); // end of document ready
 })(jQuery); // end of jQuery name space
