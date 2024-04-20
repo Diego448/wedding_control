@@ -169,7 +169,7 @@ span.span-size {
 
 .main-img {
   background-image: url("../ZyD11.jpg");
-  min-height: 700px;
+  min-height: 740px;
   max-height: 100%;
   background-size: cover;
   background-position: center center;
@@ -213,6 +213,10 @@ span.span-size {
   color: #A097AE;
 }
 
+.purple-color{
+  background-color: #A097AE !important;
+}
+
 .active{
   background-color: #A097AE !important;
 }
@@ -249,4 +253,8 @@ input[type=number] {
 
 .liverpool-logo {
   padding-top: 1rem;
+}
+
+.fixed-action-btn {
+
 }
