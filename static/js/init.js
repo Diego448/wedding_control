@@ -11,10 +11,13 @@
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
 
+    $('.scroll-top').hide();
+    
     $(window).scroll(function() {
       if ($(this).scrollTop() > 300) {
-          $('.scroll-top').fadeIn('slow');    } else {
-          $('.scroll-top').fadeOut('slow');
+        $('.scroll-top').fadeIn('slow');    
+      } else {
+        $('.scroll-top').fadeOut('slow');
       }
     });
     $('.scroll-top').click(function(event) {
