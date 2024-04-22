@@ -104,13 +104,24 @@ label.ex6 {
 }
 
 input.ex6 {
-  font-size: 25px;
+  font-size: 20px;
 }
+
+input.select-dropdown {
+  font-size: 25px !important;
+}
+
+#confirmed_adults {
+  font-size: 30px !important;
+}
+
 select.ex6 { 
-  font-size:40px !important; 
+  font-size: 40px !important; 
 }
 
-
+span.ex6 {
+  font-size: 25px !important; 
+}
 
 span.span-size {
   display: inline-block;

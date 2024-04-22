@@ -26,11 +26,21 @@
     });
 
     $(window).on('beforeunload', function() {
+        window.setTimeout(function() {
+        $(window).scrollTop(0); 
+      }, 0);
+    });
 
-      window.setTimeout(function() {
-      $(window).scrollTop(0); 
-    }, 0);
-    
+    $("#sorry_msg").hide();
+
+    $("#confirmed").on("change", () => {
+      if ($("#confirmed").find(":selected").val() === "false") {
+        $("#sorry_msg").show();
+        $("#adults_section").hide();
+      } else {
+        $("#sorry_msg").hide();
+        $("#adults_section").show();
+      }
     });
 
   }); // end of document ready
