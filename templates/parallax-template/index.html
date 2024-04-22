@@ -326,9 +326,9 @@
                   {% if invite_data['children'] | int > 0 %}
                   <label for="children" class="ex6 white-text cormorant-upright-regular">Menores</label>
                   <br>
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular" required/>
                   {% else %}
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular hide" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular hide" required/>
                   {% endif %}
                 </div>
               </div>
