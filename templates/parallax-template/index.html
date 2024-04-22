@@ -293,25 +293,34 @@
         <div class="row center">
           {% if confirmed is false %}
           <div class="container">
-            <h3 class="cormorant-upright-regular">CONFIRMA TU ASISTENCIA</h3>
-            <h4 class="cormorant-upright-regular">{{ invite_data['name'] }} ({{ invite_data['adults'] }} adultos, {{ invite_data['children'] }} menores)</h4>
+            <h4 class="cinzel-oficial">CONFIRMA TU ASISTENCIA</h4>
+            <h4 class="cormorant-upright-regular">{{ invite_data['name'] }}</h4>
+            <h5 class="cormorant-upright-regular"> Hemos reservado {{ invite_data['adults'] }} lugares para ti.</h5>
+           <!--SI LA CANTIDAD DE CHIDRENS ES > 0 QUE MUESTRE EL SIGUIENTE MENSAJE Los (EL O LA) chiquitines están invitados.-->
+            <h5 class="cormorant-upright-regular"> Los  chiquitines están invitados.</h5>
+           
             <form method="post">
               <div class="row">
+                <label class="ex6 white-text cormorant-upright-regular">Asistiré</label>
                 <div class="input-field col s12 m6 offset-m3 l6 offset-l3 white-text">
-                  <select id="confirmed" name="confirmed" required>
-                    <option value="" disabled class="cormorant-upright-regular">Confirma tu asistencia</option>
+                  <select id="confirmed" name="confirmed" style="font-size:80px !important;" required>
                     <option value="true" class="cormorant-upright-regular">Si</option>
                     <option value="false" class="cormorant-upright-regular">No</option>
+                    <!--Sentimos que no puedas estar presente en un día tan importante para nosotros. 
+                    Y QUE YA NO SE MUESTRE EL FOTMULARIO PARA ELEGIR NÚMERO -->
                   </select>
                 </div>
               </div>
               <div class="row">
                 <div class="input-field col s6 m3 offset-m3 l3 offset-l3">
-                  <label for="adults" class="white-text cormorant-upright-regular">Adultos</label>
-                  <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="text-white cormorant-upright-regular" required/>
+                  <label for="adults" class="ex6 white-text cormorant-upright-regular">Adultos</label>
+                  <br>
+                 
+                  <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="ex6 text-white cormorant-upright-regular" required/>
                 </div>
                 <div class="input-field col s6 m3 l3">
-                  <label for="children" class="white-text cormorant-upright-regular">Menores</label>
+                  <label for="children" class="ex6 white-text cormorant-upright-regular">Menores</label>
+                  <br>
                   <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="text-white cormorant-upright-regular" required/>
                 </div>
               </div>
