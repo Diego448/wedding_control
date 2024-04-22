@@ -115,6 +115,10 @@ input.select-dropdown {
   font-size: 30px !important;
 }
 
+#children {
+  font-size: 30px !important;
+}
+
 select.ex6 { 
   font-size: 40px !important; 
 }
