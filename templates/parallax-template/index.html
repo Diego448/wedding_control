@@ -296,7 +296,6 @@
             <h4 class="cinzel-oficial">CONFIRMA TU ASISTENCIA</h4>
             <h4 class="cormorant-upright-regular">{{ invite_data['name'] }}</h4>
             <h5 class="cormorant-upright-regular"> Hemos reservado {{ invite_data['adults'] }} lugares para ti.</h5>
-            <!--SI LA CANTIDAD DE CHIDRENS ES > 0 QUE MUESTRE EL SIGUIENTE MENSAJE Los (EL O LA) chiquitines están invitados.-->
             {% if invite_data['children'] | int > 0 %}
             <h5 class="cormorant-upright-regular"> Los  chiquitines están invitados.</h5>
             {% endif %}
@@ -327,9 +326,9 @@
                   {% if invite_data['children'] | int > 0 %}
                   <label for="children" class="ex6 white-text cormorant-upright-regular">Menores</label>
                   <br>
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="text-white cormorant-upright-regular" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular" required/>
                   {% else %}
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="text-white cormorant-upright-regular hide" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="chidlren" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular hide" required/>
                   {% endif %}
                 </div>
               </div>
