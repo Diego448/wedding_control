@@ -53,7 +53,7 @@
                     <p>Menores: {{ entry['children'] }}</p>
                     <p>Tel: {{ entry['phone'] }}</p>
                     <p>URL: https://zairaydiego.net/invite/{{ entry['id'] }}
-                        <button class="btn btn-small teal darken-4" onclick="writeClipboardText('zairaydiego.net/invite/{{ entry['id'] }}')">
+                        <button class="btn btn-small teal darken-4" onclick="writeClipboardText('https://zairaydiego.net/invite/{{ entry['id'] }}')">
                             <i class="material-icons">content_copy</i>
                         </button> 
                     </p>
@@ -66,8 +66,7 @@
                     {% endif %}
                 </li>
                 {% endfor %}
-              </ul>
-
+            </ul>
         </div>
 
         <div id="addFamily" class="modal">
