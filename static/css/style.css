@@ -11,8 +11,6 @@ html {
   src: url("../fonts/Fontspring-theseasons-reg.otf") format("opentype");
 }
 
-
-
 .main {
   padding: 16px;
   margin-top: 30px;
@@ -281,8 +279,4 @@ input[type=number] {
 
 .liverpool-logo {
   padding-top: 1rem;
-}
-
-.fixed-action-btn {
-
 }
