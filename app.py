@@ -7,14 +7,7 @@ app.secret_key = b'_5#y2LF4T78Y8znxec%$'
 
 @app.route('/')
 def homepage():
-    empty_invite = {
-        'name': '',
-        'desc': '',
-        'adults': '',
-        'children': '',
-        'phone': '0000000000'
-    }
-    return render_template('parallax-template/index.html', invite_data=empty_invite)
+    return render_template('parallax-template/index.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
