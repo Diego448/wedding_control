@@ -36,6 +36,7 @@
     $("#confirmed").on("change", () => {
       if ($("#confirmed").find(":selected").val() === "false") {
         $("#sorry_msg").show();
+        $("#adults_section").attr("0");
         $("#adults_section").hide();
       } else {
         $("#sorry_msg").hide();
