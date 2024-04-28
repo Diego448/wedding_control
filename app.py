@@ -32,6 +32,7 @@ def invite(id):
         return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=False)
     elif request.method == 'POST':
         confirm(id, request.form.to_dict())
+        invite_data = get(id)
         return render_template('parallax-template/index.html', invite_data=invite_data, confirmed=True)
     
 @app.route('/admin', methods=['POST', 'GET'])

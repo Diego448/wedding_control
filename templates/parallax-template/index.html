@@ -283,18 +283,27 @@
     <div id="confirmed">
     <div class="container">
       <div class="row center">
-        {% if confirmed is true %}
-        <h5 class="header col s12 light cormorant-upright-regular">¡GRACIAS POR ACOMPAÑARNOS!</h5>
-        <h6 class="cormorant-upright-regular">Tu asistencia ha sido confirmada.</h6>
-        <a href="https://calendar.app.google/5a2qFzUkwTNk6Khh7" class="btn-large waves-effect blue-darkgray-color cinzel-oficial">
-          <span> AGREGAR AL CALENDARIO </span>
-        </a>
+        {% if 'confirmed' in invite_data  %}
+          {% if invite_data['confirmed'] == 'true' %}
+          <h5 class="header col s12 light cormorant-upright-regular">¡GRACIAS POR ACOMPAÑARNOS!</h5>
+          <h6 class="cormorant-upright-regular">Tu asistencia ha sido confirmada.</h6>
+          <h7 class="cormorant-upright-regular">Nos vemos el 1 de junio {{ invite_data['desc'] }}</h7>
+          <div class="s12">
+            <a href="https://calendar.app.google/5a2qFzUkwTNk6Khh7" class="btn-large waves-effect blue-darkgray-color cinzel-oficial">
+              <span> AGREGAR AL CALENDARIO </span>
+            </a>
+          </div>
+          {% else %}
+          <h5 class="header col s12 light cormorant-upright-regular">Sentimos que no puedan acompañarnos</h5>
+          {% endif %}
+
         {% endif %}
         <div class="row center">
-          {% if confirmed is false %}
+          {% if not 'confirmed' in invite_data %}
           <div class="container">
             <h4 class="cinzel-oficial">CONFIRMA TU ASISTENCIA</h4>
             <h4 class="cormorant-upright-regular">{{ invite_data['name'] }}</h4>
+            <h5 class="cormorant-upright-regular">Favor de confirmar tu asistencia antes del 15 de mayo</h5>
             <h5 class="cormorant-upright-regular"> Hemos reservado {{ invite_data['adults'] }} lugares para ti.</h5>
             {% if invite_data['children'] | int > 0 %}
             <h5 class="cormorant-upright-regular"> Los  chiquitines están invitados.</h5>
@@ -319,16 +328,15 @@
                 <div id="adults_section" class="input-field col s6 m3 offset-m3 l3 offset-l3">
                   <label for="adults" class="ex6 white-text cormorant-upright-regular">Adultos</label>
                   <br>
-                 
-                  <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="ex6 text-white cormorant-upright-regular" value="0" required/>
+                  <input type="number" min="0" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="ex6 text-white cormorant-upright-regular" value="0" />
                 </div>
                 <div class="input-field col s6 m3 l3">
                   {% if invite_data['children'] | int > 0 %}
                   <label for="children" class="ex6 white-text cormorant-upright-regular">Menores</label>
                   <br>
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular" />
                   {% else %}
-                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular hide" required/>
+                  <input type="number" min="0" max="{{ invite_data['children'] }}" id="confirmed_children" name="confirmed_children" placeholder="0" value="0" class="ex6 text-white cormorant-upright-regular hide" />
                   {% endif %}
                 </div>
               </div>
