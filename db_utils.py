@@ -75,3 +75,25 @@ def get_totals() -> dict:
             'adults_total_confirmed': adults_total_confirmed, 
             'children_total_confirmed': children_total_confirmed
         }
+
+def generate_csv_report() -> str:
+    import os
+    from datetime import datetime
+    from pathlib import Path
+   
+    datetime.today().strftime('%Y-%m-%d')
+    all_invites = get_all()
+    base_path = f"{os.getcwd()}/reports"
+    file_date = datetime.today().strftime('%Y-%m-%d')
+    Path(base_path).mkdir(exist_ok=True)
+    file_path = f'{base_path}/report-{file_date}.csv'
+
+    with open(file_path, 'w') as f:
+        f.write(f'Familia, Descripcion, Adultos, Menores\n')
+
+        for invite in all_invites:
+            if 'confirmed' in invite and invite['confirmed'] == 'true':
+                f.write(f"{invite['name']}, {invite['desc'].replace(',', '')}, {invite['confirmed_adults']}, {invite['confirmed_children']}\n")
+
+    
+    return file_path
