@@ -158,7 +158,11 @@
         <br><br>
       </div>
   </div>
+    
 </div>
+</div>
+<div class="col s12">
+  <img class="responsive-img" src="{{ url_for('static', filename='ZyDmed.jpg') }}">
 </div>
 <div id="places">
   <div class="row grey lighten-5">
@@ -257,6 +261,9 @@
         <div class="col s12 center">
           <h3><i class="mdi-content-send brown-text"></i></h3>
           <h4 class="header center light cormorant-upright-regular">SUGERENCIA DE REGALOS</h4>
+          <div >
+            <a class="ex4 center black-text cormorant-upright-regular" >Contar con su presencia en este día tan especial, será para nosotros el mejor regalo, pero si desean obsequiarnos algo, les dejamos nuestra sugerencia. </a><br>
+          </div>
           <div class="section">
             <div class="row">
               <div class="col s12 m5 l4 liverpool-pink offset-m1 offset-l2">
@@ -305,7 +312,9 @@
               <h4 class="cinzel-oficial">CONFIRMA TU ASISTENCIA</h4>
               <h4 class="cormorant-upright-regular">{{ invite_data['name'] }}</h4>
               <h5 class="cormorant-upright-regular">Favor de confirmar tu asistencia antes del 15 de mayo</h5>
-              <h5 class="cormorant-upright-regular"> Hemos reservado {{ invite_data['adults'] }} lugares para ti.</h5>
+              
+              <h5 class="cormorant-upright-regular"> Hemos reservado {{ invite_data['adults'] }} {% if invite_data['adults'] | int == 1 %}lugar {% endif %} {% if invite_data['adults'] | int > 1 %}lugares {% endif %} para ti.</h5>
+              
               {% if invite_data['children'] | int > 0 %}
               <h5 class="cormorant-upright-regular"> Los  chiquitines están invitados.</h5>
               {% endif %}
