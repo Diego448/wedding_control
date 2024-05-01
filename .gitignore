@@ -8,3 +8,4 @@ share/
 .vscode/launch.json
 .DS_Store
 dump.rdb
+reports/

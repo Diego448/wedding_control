@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, session, redirect, url_for
-from db_utils import get_all, add, get, confirm, autoadd, get_totals
+from flask import Flask, render_template, request, session, redirect, url_for, send_file
+from db_utils import get_all, get, confirm, autoadd, get_totals, generate_csv_report
 
 app = Flask(__name__)
 app.config['TEMPLATES_AUTO_RELOAD'] = True
@@ -52,3 +52,8 @@ def admin():
     elif request.method == 'POST':
         autoadd(request.form.to_dict())
         return redirect('admin')
+    
+@app.route('/report')
+def report():
+    file_path = generate_csv_report()
+    return send_file(file_path, as_attachment=True, mimetype='text/csv')
