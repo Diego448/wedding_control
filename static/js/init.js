@@ -36,11 +36,15 @@
     $("#confirmed").on("change", () => {
       if ($("#confirmed").find(":selected").val() === "false") {
         $("#sorry_msg").show();
-        $("#adults_section").attr("0");
+        $("#confirmed_adults").attr("min", "0");
+        $("#confirmed_adults").val("0");
         $("#adults_section").hide();
+        $("#children_section").hide();
       } else {
         $("#sorry_msg").hide();
         $("#adults_section").show();
+        $("#confirmed_adults").attr("min", "1");
+        $("#children_section").show();
       }
     });
 

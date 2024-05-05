@@ -338,9 +338,9 @@
                   <div id="adults_section" class="input-field col s6 m3 offset-m3 l3 offset-l3">
                     <label for="adults" class="ex6 white-text cormorant-upright-regular">Adultos</label>
                     <br>
-                    <input type="number" min="0" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="ex6 text-white cormorant-upright-regular" value="0" />
+                    <input type="number" min="1" max="{{ invite_data['adults'] }}" id="confirmed_adults" name="confirmed_adults" placeholder="1" class="ex6 text-white cormorant-upright-regular" value="0" />
                   </div>
-                  <div class="input-field col s6 m3 l3">
+                  <div id="children_section" class="input-field col s6 m3 l3">
                     {% if invite_data['children'] | int > 0 %}
                     <label for="children" class="ex6 white-text cormorant-upright-regular">Menores</label>
                     <br>
