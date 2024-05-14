@@ -59,21 +59,33 @@ def get_totals() -> dict:
     children_total = 0
     adults_total_confirmed = 0
     children_total_confirmed = 0
+    adults_pending = 0
+    children_pending = 0
     
     for key in r.keys():
         try:
-            adults_total += int(r.hget(key, 'adults'))
-            children_total += int(r.hget(key, 'children'))
-            adults_total_confirmed += int(r.hget(key, 'confirmed_adults'))
-            children_total_confirmed += int(r.hget(key, 'confirmed_children'))
-        except TypeError:
+            adults = int(r.hget(key, 'adults'))
+            children = int(r.hget(key, 'children'))
+            adults_total += adults
+            children_total += children
+            
+            if r.hget(key, 'confirmed') not in ['true', 'false']:
+                adults_pending += adults
+                children_pending += children
+            else:
+                adults_total_confirmed += int(r.hget(key, 'confirmed_adults'))
+                children_total_confirmed += int(r.hget(key, 'confirmed_children'))
+            
+        except TypeError as e:
             continue
 
     return {
             'adults_total': adults_total, 
             'children_total': children_total, 
             'adults_total_confirmed': adults_total_confirmed, 
-            'children_total_confirmed': children_total_confirmed
+            'children_total_confirmed': children_total_confirmed,
+            'adults_pending': adults_pending,
+            'children_pending': children_pending
         }
 
 def generate_csv_report() -> str:
